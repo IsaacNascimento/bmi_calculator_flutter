@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 
-
 class CardWidget extends StatelessWidget {
-  const CardWidget({Key? key, required this.colour, this.cardChild}) : super(key: key);
-  
+  const CardWidget(
+      {Key? key, required this.colour, this.cardChild, this.onPress})
+      : super(key: key);
+
   final Color colour;
   final Widget? cardChild;
+  final void Function()? onPress;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-        color: colour,
-        borderRadius: BorderRadius.circular(10.0),
+    return GestureDetector(
+      onTap: onPress,
+      child: Container(
+        margin: const EdgeInsets.all(15.0),
+        decoration: BoxDecoration(
+          color: colour,
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        child: cardChild,
       ),
-      child: cardChild,
     );
   }
-}  
+}
