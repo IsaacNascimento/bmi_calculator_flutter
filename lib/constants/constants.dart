@@ -16,5 +16,7 @@ const kSliderOverlayColor = Color(0x29EB1555);
 const kSliderInactiveColor = Color(0xFF8D8E98);
 const kColorWhite = Colors.white;
 
+const kColorRoundButtonIcon = Color(0xFF4C4F5E);
+
 const double kMinHeight = 120.0;
 const double kMaxHeight = 220.0;

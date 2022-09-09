@@ -8,11 +8,21 @@ class BottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: kBottomContainerColour,
-      margin: const EdgeInsets.only(top: 10.0),
-      width: double.infinity,
-      height: kBottomHeight,
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, '/result');
+      },
+      child: Container(
+        color: kBottomContainerColour,
+        margin: const EdgeInsets.only(top: 10.0),
+        width: double.infinity,
+        height: kBottomHeight,
+        child: const Center(
+          child: Text(
+            'CALCULATE',
+          ),
+        ),
+      ),
     );
   }
 }
